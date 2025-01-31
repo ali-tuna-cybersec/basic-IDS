@@ -8,11 +8,6 @@ A lightweight real-time IDS that detects DoS attacks, port scans, and malicious 
 ✅ Flags suspicious payloads (known malicious patterns)
 ✅ Reduces false positives (whitelist & adaptive thresholds)
 ✅ Logs alerts to ids.log
-🛠️ Installation
-
-pip install scapy
-git clone https://github.com/yourusername/ids-tool.git
-cd ids-tool
 
 🚀 Usage
 
