@@ -1,27 +1,32 @@
-🔍 Intrusion Detection System (IDS)
+# 🔍 Intrusion Detection System (IDS)  
 
-A lightweight real-time IDS that detects DoS attacks, port scans, and malicious payloads using scapy. Logs all alerts for analysis.
-🚀 Features
+A **real-time IDS** that monitors network traffic and detects **DoS attacks, port scans, and malicious payloads** using `scapy`. Logs all alerts for analysis.  
 
-✅ Detects DoS/DDoS attacks (packet rate & timing analysis)
-✅ Identifies port scans (multiple port attempts from same IP)
-✅ Flags suspicious payloads (known malicious patterns)
-✅ Reduces false positives (whitelist & adaptive thresholds)
-✅ Logs alerts to ids.log
+---
 
-🚀 Usage
+## 🚀 Features  
+✅ **Detects DoS/DDoS attacks** *(packet rate & timing analysis)*  
+✅ **Identifies port scans** *(multiple port attempts from the same IP)*  
+✅ **Flags suspicious payloads** *(known malicious patterns)*  
+✅ **Reduces false positives** *(whitelist & adaptive thresholds)*  
+✅ **Logs alerts** to `ids.log`  
 
-Run the IDS:
+---
 
-sudo python3 ids.py
+## ⚙️ Configuration
 
-Stop with Ctrl + C
-📂 Example Logs
+🔧 Modify detection thresholds in ids.py:
 
-⚠️ Port Scan - IP: 192.168.1.100, Ports: 15  
-🚨 DoS Attack - IP: 203.0.113.50, Rate: 105 pkt/sec  
-⚠️ Suspicious Payload - IP: 185.220.101.6, Pattern: "exploit"  
+    Port Scan Threshold: PORT_SCAN_THRESHOLD = 10
+    DoS Detection: DOS_THRESHOLD = 100
+    Time Window: SLIDING_WINDOW_SIZE = 5 seconds
 
-⚙️ Configuration
+📜 Whitelist trusted IPs inside the script to reduce false positives.
 
-Edit ids.py to adjust detection thresholds.
+## 🛠️ Installation  
+```bash
+pip install scapy
+git clone https://github.com/yourusername/ids-tool.git
+cd ids-tool
+
+
